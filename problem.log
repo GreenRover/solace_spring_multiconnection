@@ -1,0 +1,67 @@
+mvn clean package ; java -jar target/solace_issue-0.0.1-SNAPSHOT.jar
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< ch.greenrover:solace_issue >---------------------
+[INFO] Building solace_issue 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ solace_issue ---
+[INFO] Deleting C:\git\solace_issue\target
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ solace_issue ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ solace_issue ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\git\solace_issue\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ solace_issue ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\git\solace_issue\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ solace_issue ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ solace_issue ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ solace_issue ---
+[INFO] Building jar: C:\git\solace_issue\target\solace_issue-0.0.1-SNAPSHOT.jar
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.2.0.RELEASE:repackage (repackage) @ solace_issue ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 6.262 s
+[INFO] Finished at: 2019-11-07T16:01:19+01:00
+[INFO] ------------------------------------------------------------------------
+[WARNING] The requested profile "default" could not be activated because it does not exist.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/git/solace_issue/target/solace_issue-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/C:/git/solace_issue/target/solace_issue-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/slf4j-log4j12-1.7.28.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-07 16:01:20.717  INFO 19440 --- [           main] ch.greenrover.solace.Application         : Starting Application v0.0.1-SNAPSHOT on K44279 with PID 19440 (C:\git\solace_issue\target\solace_issue-0.0.1-SNAPSHOT.jar started by User in C:\git\solace_issue)
+2019-11-07 16:01:20.722  INFO 19440 --- [           main] ch.greenrover.solace.Application         : No active profile set, falling back to default profiles: default
+create session
+2019-11-07 16:01:22.861  INFO 19440 --- [           main] c.s.j.protocol.impl.TcpClientChannel     : Connecting to host 'orig=broker.ch, host=broker.ch' (host 1 of 1, smfclient 2, attempt 1 of 2147483647, this_host_attempt: 1 of 2)
+2019-11-07 16:01:22.901  INFO 19440 --- [           main] c.s.j.protocol.impl.TcpClientChannel     : Connected to host 'orig=shared-rcssolace-node02.otc-test.sbb.ch, host=shared-rcssolace-node02.otc-test.sbb.ch' (smfclient 2)
+2019-11-07 16:01:22.983  INFO 19440 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 16:01:23.040  INFO 19440 --- [           main] ch.greenrover.solace.Application         : Started Application in 2.825 seconds (JVM running for 3.428)
+2019-11-07 16:01:23.062  INFO 19440 --- [         task-1] c.s.jcsmp.impl.SessionModeSupport        : (Client name: K44279/19440/#000f0001/AP1pxgrvDp   Local addr: 10.16.154.160:64468   Remote addr: broker.sbb.ch:55555) - Error Response (400) - Already Exists
+2019-11-07 16:01:23.073  INFO 19440 --- [           main] c.s.jcsmp.impl.SessionModeSupport        : (Client name: K44279/19440/#000f0001/AP1pxgrvDp   Local addr: 10.16.154.160:64468   Remote addr: broker.sbb.ch:55555) - Error Response (400) - Already Exists
+2019-11-07 16:01:23.128  INFO 19440 --- [         task-1] demo_app                                 : Start consuming queue: demoApp/inbox/K44279
+2019-11-07 16:01:28.548  INFO 19440 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
