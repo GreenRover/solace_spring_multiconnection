@@ -1,0 +1,21 @@
+solace:
+  java:
+    host: broker.url
+    msgVpn: default
+    clientUsername: default
+    clientPassword: default
+    connectRetries: -1
+    reconnectRetries: -1
+    connectRetriesPerHost: 1
+    topic:
+      applicationStartup: demoApp/startup
+      applicationControl: demoApp/control/app/>
+      globalControl: demoApp/control/global
+    queue:
+      inbox: demoApp/inbox/${HOSTNAME}
+
+logging:
+  level:
+    root: info
+    demo_app: info
+   
